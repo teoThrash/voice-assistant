@@ -1,6 +1,7 @@
 import { scene, camera, renderer, blobGroup, positionAttribute, originalPositions, simplex } from './scene.js';
 import { audioData, audioAnalyser, setupAudio } from './audio.js';
 import { setupSpeechRecognition } from './speech.js';
+import { scene, camera, renderer, blobGroup, positionAttribute, originalPositions, simplex, geometry } from './scene.js';
 
 setupAudio();
 setupSpeechRecognition();
