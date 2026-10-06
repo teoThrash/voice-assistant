@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Pulse</title>
+	<style>
+		body {margin: 0; overflow: hidden; background: black}
+		canvas {display: block}	
+		
+		#live-words {
+		  position: fixed;
+		  bottom: 60px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  display: flex;
+		  gap: 12px;
+		  pointer-events: none;
+		}
+		#live-words span {
+		  color: white;
+		  opacity: 0;
+		  transform: translateY(6px);
+		  animation: word-in 0.25s ease-out forwards;
+		}
+
+		@keyframes word-in {
+	  		to{
+	    		opacity: 1;
+	    		transform: translateY(0);
+	  		}
+		}
+	</style>
+</head>
+<body>
+	<div id="live-words"><span>hello</span> <span>world</span> <span>test</span></div>
+	<!-->
+		libraries:
+		- spacial
+		- simplex sound
+	<!-->
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+	
+	<script src = "script.js"></script>
+
+</body>
+</html>
